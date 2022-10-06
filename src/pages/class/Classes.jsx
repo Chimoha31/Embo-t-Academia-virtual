@@ -1,12 +1,12 @@
-import React from 'react'
-import './Classes.scss';
+import React from "react";
+import "./Classes.scss";
 
 const Classes = () => {
   return (
     <div className="classes">
-      Classes
+      <div>Classes</div>
     </div>
-  )
-}
+  );
+};
 
-export default Classes
+export default Classes;

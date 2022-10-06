@@ -4,10 +4,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  padding: 10px;
+  // position: absolute;
+  // bottom: 0;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
   & .sns {
     display: flex;
     gap: 20px;
