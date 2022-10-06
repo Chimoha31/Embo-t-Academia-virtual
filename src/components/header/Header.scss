@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  & .company_name {
+    margin-top: 1rem;
+    display: inline-block;
+    border: 1px solid #EBC1E7;
+    background-color: #EBC1E7;
+    color: #fff;
+    border-radius: 50%;
+    padding: 3rem 2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+}

@@ -1,4 +1,4 @@
-.gradient {
+.App {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -11,8 +11,8 @@
   );
 }
 
-.gradient:before {
-  z-index: 1;
+.App:before {
+  z-index: -100;
   position: absolute;
   top: 0;
   right: 0;
@@ -27,8 +27,8 @@
   content: "";
 }
 
-.gradient:after {
-  z-index: 2;
+.App:after {
+  z-index: -200;
   position: absolute;
   top: 0;
   right: 0;

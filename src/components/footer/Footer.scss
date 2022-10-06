@@ -1,0 +1,30 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  & .sns {
+    display: flex;
+    gap: 20px;
+    & .fab {
+      font-size: 1.5rem;
+    }
+    & .fa-facebook-square {
+      color: blue;
+    }
+    & .fa-instagram {
+      color: rgb(241, 42, 135);
+    }
+    & .fa-twitter {
+      color: rgb(72, 170, 209);
+    }
+    & .fa-youtube {
+      color: red;
+    }
+  }
+}
