@@ -1,0 +1,20 @@
+.sidebar {
+  font-size: larger;
+  color: hsl(0, 0%, 35%);
+  & .fa-bars {
+    margin: 10px 10px;
+  }
+}
+.menu_list {
+  margin-top: 3rem;
+  & .menu {
+    margin: 1rem 0;
+    font-weight: bold;
+  }
+}
+
+@media (min-width: 767px) {
+  .sidebar {
+    display: none;
+  }
+}
