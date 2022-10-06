@@ -12,7 +12,7 @@ const Footer = () => {
           <i className="fab fa-twitter"></i>
           <i className="fab fa-youtube"></i>
         </div>
-        <p>&copy; 2022 - Emboîté Academia virtual / All Rights Reserved</p>
+        <p className="copyright">&copy; 2022 - Emboîté Academia virtual / All Rights Reserved</p>
       </div>
     </Fragment>
   );

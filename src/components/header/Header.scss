@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap");
+
 .header {
   display: flex;
   flex-direction: column;
@@ -6,11 +8,32 @@
   & .company_name {
     margin-top: 1rem;
     display: inline-block;
-    border: 1px solid #EBC1E7;
-    background-color: #EBC1E7;
+    border: 1px solid #ebc1e7;
+    background-color: #ebc1e7;
     color: #fff;
     border-radius: 50%;
     padding: 3rem 2rem;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
+  & .title {
+    width: 200px;
+    font-family: "Playfair Display SC", serif;
+    margin-top: 0.5rem;
+    color: rgb(77, 77, 77);
+    text-align: center;
+    font-weight: lighter;
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 767px) {
+  .header {
+    & .title {
+      font-size: 1.1rem;
+      width: 300px;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
 }

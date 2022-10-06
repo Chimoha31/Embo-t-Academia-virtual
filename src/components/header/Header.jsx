@@ -5,9 +5,9 @@ const Header = () => {
   return (
     <div className="header">
       <div className="company_name">Emboite</div>
-      <p>
-        Somos una academia virtual fundada por la maestra Irantzu de Gandiaga{" "}
-      </p>
+      <h5 className="title">
+        Somos una academia virtual fundada por la maestra Irantzu de Gandiaga
+      </h5>
     </div>
   );
 };
