@@ -1,0 +1,45 @@
+.classes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 50px 0;
+  & .class_card {
+    width: 92%;
+    height: 150px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 35px 35px 5px 5px;
+    & .card_header {
+      background-color: #acddd8;
+      border-radius: 30px 30px 2px 2px;
+    }
+    & .card_body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: scroll;
+      & img {
+        width: 70px;
+        height: 70px;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+@media (min-width: 767px) {
+  .classes {
+    & .class_card {
+      max-width: 750px;
+      height: 200px;
+      & .card_body {
+        & img {
+          width: 150px;
+          height: 130px;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}
