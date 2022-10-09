@@ -1,12 +1,38 @@
-import React from 'react'
-import './Gallery.scss';
+import React, { useState } from "react";
+import { Carousel } from "react-bootstrap";
+import "./Gallery.scss";
+import GalleryImages from "../../data/GalleryImages";
 
 const Gallery = () => {
+  const [selectedImage, setSelectedImage] = useState(GalleryImages[0].image);
+
   return (
     <div className="gallery">
-      Gallery
-    </div>
-  )
-}
+      {/* Slide Show */}
+      <Carousel fade className="slide_container">
+        <Carousel.Item className="slide_gallery">
+          <img
+            className="d-block w-100"
+            src={selectedImage}
+            alt="Selected Class"
+          />
+        </Carousel.Item>
+      </Carousel>
 
-export default Gallery
+      {/* All GalleryImages */}
+      <div className="images_container">
+        {GalleryImages.map((gallery) => (
+          <div key={gallery.id} className="all_images">
+            <img
+              src={gallery.image}
+              alt="Class Img"
+              onClick={() => setSelectedImage(gallery.image)}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Gallery;
