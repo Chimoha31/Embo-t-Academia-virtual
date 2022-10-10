@@ -3,21 +3,31 @@
   & .slide_container {
     width: 90%;
     height: 300px;
-    // border: 1px solid blue;
     margin: 20px auto;
     box-shadow: rgba(56, 56, 61, 0.2) 0px 7px 29px 0px;
     border-radius: 10px;
     & .slide_gallery {
-      // border: 1px solid red;
       width: 100%;
       height: 300px;
+      & .prev,
+      & .next {
+        position: absolute;
+        top: 50%;
+        font-size: 1rem;
+        color: rgb(109, 109, 109);
+      }
+      & .prev {
+        left: 15px;
+      }
+      & .next {
+        right: 15px;
+      }
       & img {
         height: 100%;
         object-fit: contain;
       }
     }
   }
-
   .images_container {
     display: flex;
     justify-content: center;
@@ -26,9 +36,7 @@
     gap: 20px;
     width: 100%;
     margin: 50px 0;
-    // border: 1px solid red;
     & .all_images {
-      // border: 1px solid blue;
       box-shadow: rgba(56, 56, 61, 0.2) 0px 7px 29px 0px;
       border-radius: 10px;
       cursor: pointer;
@@ -42,11 +50,14 @@
   }
 }
 
-// Slide bar
+// Slide
 .active {
   display: none;
 }
-
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  display: none;
+}
 
 @media (min-width: 767px) {
   .gallery {
@@ -54,6 +65,16 @@
       height: 400px;
       & .slide_gallery {
         height: 400px;
+        & .prev,
+        & .next {
+          font-size: 1.4rem;
+        }
+        & .prev {
+          left: 20px;
+        }
+        & .next {
+          right: 20px;
+        }
       }
     }
 
@@ -75,9 +96,20 @@
       height: 500px;
       & .slide_gallery {
         height: 500px;
+        & .prev,
+        & .next {
+          font-size: 1.6rem;
+        }
+        & .prev {
+          left: 25px;
+        }
+        & .next {
+          right: 25px;
+        }
       }
     }
     .images_container {
+      padding: 10px;
       & .all_images {
         & img {
           width: 200px;

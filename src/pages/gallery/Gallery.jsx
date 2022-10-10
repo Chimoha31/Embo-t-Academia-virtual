@@ -11,11 +11,19 @@ const Gallery = () => {
       {/* Slide Show */}
       <Carousel fade className="slide_container">
         <Carousel.Item className="slide_gallery">
-          <img
-            className="d-block w-100"
-            src={selectedImage}
-            alt="Selected Class"
-          />
+          <>
+            <p className="prev">
+              <i className="fa-solid fa-chevron-left"></i>
+            </p>
+            <p className="next">
+              <i className="fa-solid fa-chevron-right"></i>
+            </p>
+            <img
+              className="d-block w-100"
+              src={selectedImage}
+              alt="Selected Class"
+            />
+          </>
         </Carousel.Item>
       </Carousel>
 
