@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-// import { Carousel } from "react-bootstrap";
 import "./Gallery.scss";
-import data from '../../data/GalleryImages.json';
+// import data from '../../data/GalleryImages.json';
+import GalleryImages from '../../data/GalleryImages';
 
 const Gallery = () => {
-  const [selectedImage, setSelectedImage] = useState(data.data[0].image);
+  const [selectedImage, setSelectedImage] = useState(GalleryImages[0].image);
   const [currentIndex, setCurrentIndex] = useState(null);
 
   const handleClick = (gallery, index) => {
@@ -15,16 +15,16 @@ const Gallery = () => {
 
   const handleRightArrow = () => {
     console.log("Right Arrow clicked");
-    const totalLength = data.data.length;
+    const totalLength = GalleryImages.length;
     if (currentIndex + 1 >= totalLength ) {
       setCurrentIndex(0);
       // const newUrl = data.data[0].image;
-      setSelectedImage(data.data[0].image);
+      setSelectedImage(GalleryImages[0].image);
       return;
     }
     const newIndex = currentIndex + 1;
-    const newUrl = data.data.filter((item) => {
-      return data.data.indexOf(item) === newIndex;
+    const newUrl = GalleryImages.filter((item) => {
+      return GalleryImages.indexOf(item) === newIndex;
     });
     const newItem = newUrl[0].image;
     setSelectedImage(newItem);
@@ -72,7 +72,7 @@ const Gallery = () => {
 
       {/* All GalleryImages */}
       <div className="images_container">
-        {data.data.map((gallery, index) => (
+        {GalleryImages.map((gallery, index) => (
           <div key={index} className="all_images">
             <img
               src={gallery.image}
