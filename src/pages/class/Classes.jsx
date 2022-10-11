@@ -1,12 +1,25 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 import "./Classes.scss";
 import AllClasses from "../../data/AllClasses";
 
 const Classes = () => {
   return (
-    <div className="classes">
+    // <div className="classes">
+      <div className="d-flex flex-wrap justify-content-center gap-3 mt-5 mb-5">
       {AllClasses.map((eachClass) => (
+        <Card style={{ width: "18rem" }} key={eachClass.id} className="shadow-lg">
+          <Card.Img variant="top" src={eachClass.image} alt="class img" />
+          <Card.Body>
+            <Card.Title>{eachClass.className}</Card.Title>
+            <Card.Text>
+            {eachClass.description}
+            </Card.Text>
+            <Button variant="primary">Detail</Button>
+          </Card.Body>
+        </Card>
+      ))}
+      {/* {AllClasses.map((eachClass) => (
         <Card key={eachClass.id} className="class_card">
           <Card.Header className="card_header">
             {eachClass.className}
@@ -18,7 +31,7 @@ const Classes = () => {
             </Card.Text>
           </Card.Body>
         </Card>
-      ))}
+      ))} */}
     </div>
   );
 };
