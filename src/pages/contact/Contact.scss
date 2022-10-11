@@ -1,3 +1,22 @@
 .contact {
-  color: violet;
+  height: 100vh;
+  & .form {
+    width: 90%;
+  }
+}
+
+@media (min-width: 676px) {
+  .contact {
+    & .form {
+      width: 500px;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .contact {
+    & .form {
+      max-width: 600px;
+    }
+  }
 }
