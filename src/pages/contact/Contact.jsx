@@ -6,23 +6,17 @@ const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [comments, setComments] = useState("");
-  const [submitMsg, setSubmitMsg] = useState("");
-
-  // console.log(name);
-  // console.log(email);
-  // console.log(comments);
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
 
   const handleSubmit = (e) => {
-    setSubmitMsg("");
+    setError("");
+    setSuccess("");
     e.preventDefault();
     if (name === "" || email === "" || comments === "") {
-      setSubmitMsg("Please fill in the blank");
+      setError("Please fill in the blank");
     } else if (name && email && comments) {
-      setSubmitMsg(
-        "Thank you for your message. We will reply within 48 hours."
-      );
-
-      //reset!!!!!!!!!!!!!!!!!!!!
+      setSuccess("Thank you for your message. We will reply within 48 hours.");
       setName("");
       setEmail("");
       setComments("");
@@ -38,6 +32,7 @@ const Contact = () => {
           <Form.Control
             type="name"
             placeholder="Name"
+            value={name}
             onChange={(e) => setName(e.target.value)}
           />
         </Form.Group>
@@ -48,6 +43,7 @@ const Contact = () => {
           <Form.Control
             type="email"
             placeholder="Enter email"
+            value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
         </Form.Group>
@@ -64,18 +60,19 @@ const Contact = () => {
             placeholder="Leave a comment here"
             className="comments"
             style={{ height: "300px" }}
+            value={comments}
             onChange={(e) => setComments(e.target.value)}
           />
         </FloatingLabel>
 
-        {submitMsg && (
-          <Alert
-            variant={
-              submitMsg === "Please fill in the blank" ? "danger" : "success"
-            }
-            className="mb-2 p-1 text-center"
-          >
-            {submitMsg}
+        {error && !success && (
+          <Alert variant="danger" className="mb-2 p-1 text-center msg">
+            {error}
+          </Alert>
+        )}
+        {success && !error && (
+          <Alert variant="success" className="mb-2 p-1 text-center msg">
+            {success}
           </Alert>
         )}
 
