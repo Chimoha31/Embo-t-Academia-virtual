@@ -64,9 +64,9 @@
 @media (min-width: 767px) {
   .gallery {
     & .slide_container {
-      height: 400px;
+      height: 380px;
       & .slide_gallery {
-        height: 400px;
+        height: 380px;
         & .prev,
         & .next {
           font-size: 1.4rem;
@@ -83,8 +83,8 @@
     .images_container {
       & .all_images {
         & img {
-          width: 180px;
-          height: 180px;
+          width: 160px;
+          height: 160px;
         }
       }
     }
@@ -95,9 +95,9 @@
   .gallery {
     & .slide_container {
       max-width: 1000px;
-      height: 500px;
+      height: 450px;
       & .slide_gallery {
-        height: 500px;
+        height: 450px;
         & .prev,
         & .next {
           font-size: 1.6rem;
@@ -114,8 +114,8 @@
       padding: 10px;
       & .all_images {
         & img {
-          width: 200px;
-          height: 200px;
+          width: 180px;
+          height: 180px;
         }
       }
     }
