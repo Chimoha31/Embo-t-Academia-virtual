@@ -1,52 +1,73 @@
-.button_solid007 {
+.check_button {
   text-align: center;
+  & p {
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #6bb6ff;
+    letter-spacing: 0.5rem;
+    display: inline-block;
+    position: relative;
+    &:before,
+    &:after {
+      display: inline-block;
+      position: absolute;
+      top: 45%;
+      width: 20px;
+      height: 3px;
+      border-radius: 5px;
+      background-color: #6bb6ff;
+      content: "";
+    }
+    &:before {
+      left: -30px;
+      -webkit-transform: rotate(50deg);
+      transform: rotate(50deg);
+    }
+    &:after {
+      right: -30px;
+      -webkit-transform: rotate(-50deg);
+      transform: rotate(-50deg);
+    }
+  }
+  & a {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    background: #5eceb2;
+    // border: 1px solid rgba(57, 143, 71, 0.637);
+    filter: drop-shadow(0px 2px 4px #ccc);
+    border-radius: 3px;
+    text-decoration: none;
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px -5px rgb(0 0 0 / 15%), 0 0 5px rgb(0 0 0 / 10%);
+    }
+  }
 }
-.button_solid007 p {
-  margin-bottom: 5px;
-  font-weight: 600;
-  color: #6bb6ff;
-  letter-spacing: 0.5rem;
-  display: inline-block;
-  position: relative;
+.check_ctn {
+  margin: 0 10px;
+  & .first_check,
+  & .second_check {
+    font-size: 12px;
+  }
 }
-.button_solid007 p:before, .button_solid007 p:after {
-  display: inline-block;
-  position: absolute;
-  top: 45%;
-  width: 20px;
-  height: 3px;
-  border-radius: 5px;
-  background-color: #6bb6ff;
-  content: "";
+
+@media (min-width: 767px) {
+  .check_ctn {
+    margin: 0 10px;
+    & .first_check,
+    & .second_check {
+      font-size: 16px;
+    }
+  }
 }
-.button_solid007 p:before {
-  left: -30px;
-  -webkit-transform: rotate( 50deg );
-  transform: rotate( 50deg );
-}
-.button_solid007 p:after {
-  right: -30px;
-  -webkit-transform: rotate( -50deg );
-  transform: rotate( -50deg );
-}
-.button_solid007 a {
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0 auto;
-  max-width: 240px;
-  padding: 10px 25px;
-  color: #FFF;
-  transition: 0.3s ease-in-out;
-  font-weight: 600;
-  background: #5eceb2;
-  // border: 1px solid rgba(57, 143, 71, 0.637);
-  filter: drop-shadow(0px 2px 4px #ccc);
-  border-radius: 3px;
-  text-decoration: none;
-}
-.button_solid007 a:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 15px 30px -5px rgb(0 0 0 / 15%), 0 0 5px rgb(0 0 0 / 10%);
+
+@media (min-width: 1025px) {
 }

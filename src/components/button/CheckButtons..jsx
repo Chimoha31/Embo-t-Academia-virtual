@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 
 const CheckButtons = () => {
   return (
-    <div class="button_solid007 mt-3">
+    <div class="check_button mt-3">
       <p>Check</p>
-      <div className="d-flex justify-content-center gap-3">
-        <div>
+      <div className="d-flex justify-content-center gap-3 check_ctn">
+        <div className="first_check">
           <Link to="/classes">TODAS LAS CLASES</Link>
         </div>
-        <div className="aaa">
+        <div className="aaa" className="second_check">
           <Link to="#">SOLICITA INFORMES</Link>
         </div>
       </div>

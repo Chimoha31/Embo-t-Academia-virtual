@@ -10,16 +10,16 @@
     display: flex;
     flex-direction: column;
     & .accordion-item {
-      border-radius: 15px 10px 0px 0px !important;
+      border-radius: 17px 12px 0px 0px !important;
       margin-bottom: 3px;
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
       & .accordion-button {
         height: 40px;
-        background: rgba(235, 193, 231, 0.685);
+        background: rgba(235, 193, 231, 0.87);
         background: linear-gradient(
           0deg,
-          rgba(235, 193, 231, 0.685) 0%,
-          rgba(179, 223, 218, 0.644) 63%
+          rgba(235, 193, 231, 0.87) 0%,
+          rgba(179, 223, 218, 0.849) 63%
         );
         border-radius: 15px 10px 0px 0px !important;
         font-size: 1.2rem;
