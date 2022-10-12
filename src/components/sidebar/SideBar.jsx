@@ -17,7 +17,7 @@ const SideBar = () => {
         </Offcanvas.Header>
         <Offcanvas.Body className="menu_list">
           <Nav.Item>
-            <Nav.Link href="/home" className="menu">HOME</Nav.Link>
+            <Nav.Link href="/" className="menu">HOME</Nav.Link>
           </Nav.Item>
           <Nav.Item>
             <Nav.Link href="/classes" className="menu">CLASSES</Nav.Link>

@@ -1,0 +1,31 @@
+.accordion {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  & .accordion_class {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    & .accordion-item {
+      border-radius: 15px 10px 0px 0px !important;
+      margin-bottom: 3px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      & .accordion-button {
+        background-color: #b3dfda !important;
+        border-radius: 15px 10px 0px 0px !important;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 767px) {
+  .accordion {
+    & .accordion_class {
+      width: 400px;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+}
