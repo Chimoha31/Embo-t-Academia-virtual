@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const CheckButtons = () => {
   return (
-    <div class="check_button mt-3 mb-4">
+    <div className="check_button mt-3 mb-4">
       <p>Check</p>
       <div className="d-flex justify-content-center gap-3 check_ctn">
         <div className="first_check">

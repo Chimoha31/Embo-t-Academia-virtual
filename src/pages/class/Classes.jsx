@@ -8,7 +8,7 @@ const Classes = () => {
     // <div className="classes">
       <div className="d-flex flex-wrap justify-content-center gap-3 mt-5 mb-5">
       {AllClasses.map((eachClass) => (
-        <Card style={{ width: "21rem" }} key={eachClass.id} className="shadow-lg">
+        <Card style={{ width: "18rem" }} key={eachClass.id} className="shadow-lg">
           <Card.Img variant="top" src={eachClass.image} alt="class img" />
           <Card.Body>
             <Card.Title>{eachClass.className}</Card.Title>

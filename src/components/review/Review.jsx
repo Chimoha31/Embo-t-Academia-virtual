@@ -4,7 +4,7 @@ import "./Review.scss";
 const Review = () => {
   return (
     <div className="d-flex flex-column justify-content-center align-items-center review_ctn mt-5 p-2">
-      <h2 className="text-center mb-5">NUESTROS ALUMNOSN</h2>
+      <h2 className="text-center mb-5 aaaaa">NUESTROS ALUMNOSN</h2>
       {/* 1st review */}
       <div className="d-flex justify-content-center align-items-center text-center gap-3 mb-5 reviews">
         <div className="comments">
