@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Card } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import "./Classes.scss";
 import AllClasses from "../../data/AllClasses";
 
@@ -15,7 +15,7 @@ const Classes = () => {
             <Card.Text>
             {eachClass.description}
             </Card.Text>
-            <Button variant="primary">Detail</Button>
+            {/* <Button variant="primary">Detail</Button> */}
           </Card.Body>
         </Card>
       ))}
